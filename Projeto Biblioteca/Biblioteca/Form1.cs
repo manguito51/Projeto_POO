@@ -103,8 +103,6 @@ namespace Biblioteca
             panel1.Visible = false;
         }
 
-
-
         private void pesquisarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cadastrarToolStripMenuItem.BackColor = SystemColors.Control;
@@ -123,7 +121,7 @@ namespace Biblioteca
                 labelTitulo.Text = "Nenhum livro cadastrado";
                 labelAno.Text = "";
                 labelAutor.Text = "";
-                labelDisponibilidade.Text = "";
+                pictureBoxDisponibilidade.Image = null;
                 pictureBoxPesquisa.Image = null;
                 return;
             }
@@ -148,7 +146,18 @@ namespace Biblioteca
             {
                 pictureBoxPesquisa.Image = null;
             }
-            labelDisponibilidade.Text = livro.Disponibilidade ? "Disponível" : "Indisponível";
+
+            string imagemDisponivel = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sources", "Images", "disponivel.png");
+            string imagemIndisponivel = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sources", "Images", "indisponivel.png");
+
+            if (livro.Disponibilidade && System.IO.File.Exists(imagemDisponivel))
+                pictureBoxDisponibilidade.Image = Image.FromFile(imagemDisponivel);
+
+            else if (!livro.Disponibilidade && System.IO.File.Exists(imagemIndisponivel))
+                pictureBoxDisponibilidade.Image = Image.FromFile(imagemIndisponivel);
+
+            else
+                pictureBoxDisponibilidade.Image = null;
         }
 
         private void buttonProx_Click(object sender, EventArgs e)
@@ -162,6 +171,15 @@ namespace Biblioteca
         {
             if (livrosTable == null || livrosTable.Count == 0) return;
             if (livroAtualIndex > 0) livroAtualIndex--;
+            ExibirLivroAtual();
+        }
+
+        private void buttonAlterarDisponibilidade_Click(object sender, EventArgs e)
+        {
+            if (livrosTable == null || livrosTable.Count == 0) return;
+            var livroAtual = livrosTable[livroAtualIndex];
+            livroAtual.Disponibilidade = !livroAtual.Disponibilidade;
+            bancoDados.AtualizarLivro(livroAtual);
             ExibirLivroAtual();
         }
     }

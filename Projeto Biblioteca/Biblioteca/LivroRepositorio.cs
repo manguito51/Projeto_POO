@@ -213,5 +213,87 @@ namespace Biblioteca
             }
             return livros;
         }
+
+        public void AtualizarLivro(Livro livro)
+        {
+            using (var conexao = new MySqlConnection(connectionString))
+            {
+                conexao.Open();
+                using (var transacao = conexao.BeginTransaction())
+                {
+                    // Atualiza o livro
+                    string sql = @"UPDATE livro SET 
+                                Titulo = @Titulo, 
+                                AnoPublicacao = @Ano, 
+                                Editora = @Editora, 
+                                Imagem = @Imagem, 
+                                Disponibilidade = @Disp, 
+                                DataEmprestimo = @Emp, 
+                                DataDevolucao = @Dev 
+                           WHERE Id = @Id";
+                    using (var cmd = new MySqlCommand(sql, conexao, transacao))
+                    {
+                        cmd.Parameters.AddWithValue("@Titulo", livro.Titulo);
+                        cmd.Parameters.AddWithValue("@Ano", livro.AnoPublicacao);
+                        cmd.Parameters.AddWithValue("@Editora", livro.Editora);
+                        cmd.Parameters.AddWithValue("@Imagem", livro.Imagem);
+                        cmd.Parameters.AddWithValue("@Disp", livro.Disponibilidade);
+                        cmd.Parameters.AddWithValue("@Emp", (object)livro.DataEmprestimo ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Dev", (object)livro.DataDevolucao ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Id", livro.Id);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    // Verifica se o autor existe antes de atualizar
+                    string checkAutor = "SELECT COUNT(*) FROM autor WHERE Id = @Id";
+                    using (var cmdCheck = new MySqlCommand(checkAutor, conexao, transacao))
+                    {
+                        cmdCheck.Parameters.AddWithValue("@Id", livro.Autor.Id);
+                        var count = Convert.ToInt32(cmdCheck.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            // Atualiza o autor
+                            string updateAutor = "UPDATE autor SET Nome = @Nome, Sobrenome = @Sobrenome WHERE Id = @Id";
+                            using (var cmdAutor = new MySqlCommand(updateAutor, conexao, transacao))
+                            {
+                                cmdAutor.Parameters.AddWithValue("@Nome", livro.Autor.Nome);
+                                cmdAutor.Parameters.AddWithValue("@Sobrenome", livro.Autor.Sobrenome);
+                                cmdAutor.Parameters.AddWithValue("@Id", livro.Autor.Id);
+                                cmdAutor.ExecuteNonQuery();
+                            }
+                        }
+                        else
+                        {
+                            throw new Exception("Autor associado ao livro não encontrado.");
+                        }
+                    }
+
+                    // Remove todos os gêneros antigos
+                    string deleteGeneros = "DELETE FROM livro_genero WHERE LivroId = @LivroId";
+                    using (var cmdDelete = new MySqlCommand(deleteGeneros, conexao, transacao))
+                    {
+                        cmdDelete.Parameters.AddWithValue("@LivroId", livro.Id);
+                        cmdDelete.ExecuteNonQuery();
+                    }
+
+                    // Reinsere os gêneros atualizados
+                    foreach (var genero in livro.Generos)
+                    {
+                        int generoId = InserirGenero(genero); // Reaproveita método existente
+
+                        string insertGenero = "INSERT INTO livro_genero (LivroId, GeneroId) VALUES (@LivroId, @GeneroId)";
+                        using (var cmdGenero = new MySqlCommand(insertGenero, conexao, transacao))
+                        {
+                            cmdGenero.Parameters.AddWithValue("@LivroId", livro.Id);
+                            cmdGenero.Parameters.AddWithValue("@GeneroId", generoId);
+                            cmdGenero.ExecuteNonQuery();
+                        }
+                    }
+
+                    transacao.Commit();
+                }
+            }
+        }
+
     }
 }

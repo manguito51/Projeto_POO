@@ -48,17 +48,23 @@
             this.buttonAnt = new System.Windows.Forms.Button();
             this.buttonProx = new System.Windows.Forms.Button();
             this.pictureBoxPesquisa = new System.Windows.Forms.PictureBox();
-            this.labelDisponibilidade = new System.Windows.Forms.Label();
             this.labelAutor = new System.Windows.Forms.Label();
             this.labelAno = new System.Windows.Forms.Label();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.textAno = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textEditora = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBoxDisponibilidade = new System.Windows.Forms.PictureBox();
+            this.buttonAlterarDisponibilidade = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPesquisa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDisponibilidade)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,7 +85,7 @@
             this.buttonInserir.Name = "buttonInserir";
             this.buttonInserir.Size = new System.Drawing.Size(75, 33);
             this.buttonInserir.TabIndex = 1;
-            this.buttonInserir.Text = "inserir";
+            this.buttonInserir.Text = "INSERIR";
             this.buttonInserir.UseVisualStyleBackColor = true;
             this.buttonInserir.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -95,12 +101,11 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Disponível",
             "Insdiponível"});
-            this.comboBox1.Location = new System.Drawing.Point(274, 282);
+            this.comboBox1.Location = new System.Drawing.Point(274, 273);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 3;
@@ -129,7 +134,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(111, 234);
+            this.label5.Location = new System.Drawing.Point(111, 239);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 21);
             this.label5.TabIndex = 6;
@@ -181,7 +186,7 @@
             "Fantasia",
             "Romance",
             "Aventura"});
-            this.checkedListBox1.Location = new System.Drawing.Point(115, 282);
+            this.checkedListBox1.Location = new System.Drawing.Point(93, 273);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(95, 79);
             this.checkedListBox1.TabIndex = 15;
@@ -221,13 +226,18 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonAlterarDisponibilidade);
+            this.panel1.Controls.Add(this.pictureBoxDisponibilidade);
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.buttonAnt);
             this.panel1.Controls.Add(this.buttonProx);
             this.panel1.Controls.Add(this.pictureBoxPesquisa);
-            this.panel1.Controls.Add(this.labelDisponibilidade);
             this.panel1.Controls.Add(this.labelAutor);
             this.panel1.Controls.Add(this.labelAno);
             this.panel1.Controls.Add(this.labelTitulo);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
@@ -258,28 +268,19 @@
             // 
             this.pictureBoxPesquisa.Location = new System.Drawing.Point(241, 24);
             this.pictureBoxPesquisa.Name = "pictureBoxPesquisa";
-            this.pictureBoxPesquisa.Size = new System.Drawing.Size(281, 207);
+            this.pictureBoxPesquisa.Size = new System.Drawing.Size(281, 243);
             this.pictureBoxPesquisa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPesquisa.TabIndex = 4;
             this.pictureBoxPesquisa.TabStop = false;
-            // 
-            // labelDisponibilidade
-            // 
-            this.labelDisponibilidade.AutoSize = true;
-            this.labelDisponibilidade.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDisponibilidade.Location = new System.Drawing.Point(643, 357);
-            this.labelDisponibilidade.Name = "labelDisponibilidade";
-            this.labelDisponibilidade.Size = new System.Drawing.Size(118, 21);
-            this.labelDisponibilidade.TabIndex = 3;
-            this.labelDisponibilidade.Text = "Disponibilidade";
             // 
             // labelAutor
             // 
             this.labelAutor.AutoSize = true;
             this.labelAutor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAutor.Location = new System.Drawing.Point(350, 333);
+            this.labelAutor.Location = new System.Drawing.Point(322, 357);
+            this.labelAutor.MinimumSize = new System.Drawing.Size(200, 0);
             this.labelAutor.Name = "labelAutor";
-            this.labelAutor.Size = new System.Drawing.Size(49, 21);
+            this.labelAutor.Size = new System.Drawing.Size(200, 21);
             this.labelAutor.TabIndex = 2;
             this.labelAutor.Text = "Autor";
             // 
@@ -287,9 +288,10 @@
             // 
             this.labelAno.AutoSize = true;
             this.labelAno.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAno.Location = new System.Drawing.Point(357, 291);
+            this.labelAno.Location = new System.Drawing.Point(322, 311);
+            this.labelAno.MinimumSize = new System.Drawing.Size(200, 0);
             this.labelAno.Name = "labelAno";
-            this.labelAno.Size = new System.Drawing.Size(38, 21);
+            this.labelAno.Size = new System.Drawing.Size(200, 21);
             this.labelAno.TabIndex = 1;
             this.labelAno.Text = "Ano";
             // 
@@ -297,9 +299,10 @@
             // 
             this.labelTitulo.AutoSize = true;
             this.labelTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.Location = new System.Drawing.Point(350, 246);
+            this.labelTitulo.Location = new System.Drawing.Point(322, 270);
+            this.labelTitulo.MinimumSize = new System.Drawing.Size(200, 0);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(52, 21);
+            this.labelTitulo.Size = new System.Drawing.Size(200, 21);
             this.labelTitulo.TabIndex = 0;
             this.labelTitulo.Text = "Título";
             // 
@@ -326,6 +329,65 @@
             this.textEditora.Name = "textEditora";
             this.textEditora.Size = new System.Drawing.Size(142, 20);
             this.textEditora.TabIndex = 21;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(237, 270);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 21);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Título:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(237, 311);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 21);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Ano:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(237, 357);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 21);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Autor:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(643, 285);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(118, 21);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Disponibilidade";
+            // 
+            // pictureBoxDisponibilidade
+            // 
+            this.pictureBoxDisponibilidade.Location = new System.Drawing.Point(677, 323);
+            this.pictureBoxDisponibilidade.Name = "pictureBoxDisponibilidade";
+            this.pictureBoxDisponibilidade.Size = new System.Drawing.Size(45, 41);
+            this.pictureBoxDisponibilidade.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxDisponibilidade.TabIndex = 11;
+            this.pictureBoxDisponibilidade.TabStop = false;
+            // 
+            // buttonAlterarDisponibilidade
+            // 
+            this.buttonAlterarDisponibilidade.Location = new System.Drawing.Point(661, 370);
+            this.buttonAlterarDisponibilidade.Name = "buttonAlterarDisponibilidade";
+            this.buttonAlterarDisponibilidade.Size = new System.Drawing.Size(75, 23);
+            this.buttonAlterarDisponibilidade.TabIndex = 12;
+            this.buttonAlterarDisponibilidade.Text = "Alterar";
+            this.buttonAlterarDisponibilidade.UseVisualStyleBackColor = true;
+            this.buttonAlterarDisponibilidade.Click += new System.EventHandler(this.buttonAlterarDisponibilidade_Click);
             // 
             // Form1
             // 
@@ -359,6 +421,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPesquisa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDisponibilidade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,12 +450,17 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textEditora;
         private System.Windows.Forms.PictureBox pictureBoxPesquisa;
-        private System.Windows.Forms.Label labelDisponibilidade;
         private System.Windows.Forms.Label labelAutor;
         private System.Windows.Forms.Label labelAno;
         private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.Button buttonAnt;
         private System.Windows.Forms.Button buttonProx;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBoxDisponibilidade;
+        private System.Windows.Forms.Button buttonAlterarDisponibilidade;
     }
 }
 
