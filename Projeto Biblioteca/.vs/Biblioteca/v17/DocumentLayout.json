@@ -1,0 +1,118 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{802672A9-3E63-4DC2-B05D-942123EC5271}|Biblioteca\\Biblioteca.csproj|c:\\users\\fabricio-j\\source\\repos\\biblioteca 2\\projeto biblioteca\\biblioteca\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{802672A9-3E63-4DC2-B05D-942123EC5271}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{802672A9-3E63-4DC2-B05D-942123EC5271}|Biblioteca\\Biblioteca.csproj|C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\biblioteca\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{802672A9-3E63-4DC2-B05D-942123EC5271}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{802672A9-3E63-4DC2-B05D-942123EC5271}|Biblioteca\\Biblioteca.csproj|C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\biblioteca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{802672A9-3E63-4DC2-B05D-942123EC5271}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{802672A9-3E63-4DC2-B05D-942123EC5271}|Biblioteca\\Biblioteca.csproj|C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\biblioteca\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{802672A9-3E63-4DC2-B05D-942123EC5271}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{802672A9-3E63-4DC2-B05D-942123EC5271}|Biblioteca\\Biblioteca.csproj|C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\biblioteca\\genero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{802672A9-3E63-4DC2-B05D-942123EC5271}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\genero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{802672A9-3E63-4DC2-B05D-942123EC5271}|Biblioteca\\Biblioteca.csproj|C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\biblioteca\\livrorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{802672A9-3E63-4DC2-B05D-942123EC5271}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\livrorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\Biblioteca\\Form1.cs",
+              "RelativeDocumentMoniker": "Biblioteca\\Form1.cs",
+              "ToolTip": "C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\Biblioteca\\Form1.cs",
+              "RelativeToolTip": "Biblioteca\\Form1.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T19:39:19.792Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LivroRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\Biblioteca\\LivroRepositorio.cs",
+              "RelativeDocumentMoniker": "Biblioteca\\LivroRepositorio.cs",
+              "ToolTip": "C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\Biblioteca\\LivroRepositorio.cs",
+              "RelativeToolTip": "Biblioteca\\LivroRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T19:27:19.844Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Genero.cs",
+              "DocumentMoniker": "C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\Biblioteca\\Genero.cs",
+              "RelativeDocumentMoniker": "Biblioteca\\Genero.cs",
+              "ToolTip": "C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\Biblioteca\\Genero.cs",
+              "RelativeToolTip": "Biblioteca\\Genero.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T01:21:20.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Livro.cs",
+              "DocumentMoniker": "C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\Biblioteca\\Livro.cs",
+              "RelativeDocumentMoniker": "Biblioteca\\Livro.cs",
+              "ToolTip": "C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\Biblioteca\\Livro.cs",
+              "RelativeToolTip": "Biblioteca\\Livro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T01:21:13.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\Biblioteca\\Program.cs",
+              "RelativeDocumentMoniker": "Biblioteca\\Program.cs",
+              "ToolTip": "C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\Biblioteca\\Program.cs",
+              "RelativeToolTip": "Biblioteca\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T01:07:15.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Projeto Biblioteca\\Biblioteca\\Form1.cs",
+              "RelativeDocumentMoniker": "Biblioteca\\Form1.cs",
+              "ToolTip": "C:\\Users\\Fabricio-J\\source\\repos\\Biblioteca 2\\Biblioteca\\Form1.cs [Design]",
+              "RelativeToolTip": "..\\Biblioteca\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T00:02:30.718Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
