@@ -7,7 +7,9 @@ namespace Biblioteca
 {
     public partial class Form1 : Form
     {
+        // Variável do banco de dados
         private LivroRepositorio bancoDados = new LivroRepositorio();
+        // Váriavel para converter imagem escolhida em byte, para a inserção no banco
         private byte[] imagemBytes;
         List<Livro> livrosTable = new List<Livro>();
         private int livroAtualIndex = 0;
@@ -19,6 +21,7 @@ namespace Biblioteca
             livrosTable = bancoDados.ObterLivros();
         }
 
+        // Função para limpar os campos da aba cadastrar
         private void LimparCampos()
         {
             textTitulo.Clear();
@@ -34,6 +37,7 @@ namespace Biblioteca
             pictureBox1.Image = null;
         }
 
+        // Função do botão para inserir os dados no banco
         private void button1_Click(object sender, EventArgs e)
         {
             DateTime dataRetirada = DateTime.Now;
@@ -73,9 +77,7 @@ namespace Biblioteca
             LimparCampos();
         }
 
-
-
-
+        // Função do botão para escolher imagem em máquina
         private void button2_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -96,6 +98,7 @@ namespace Biblioteca
             }
         }
 
+        // Função do botão (Cadastrar) para mudar para panel do cadastro
         private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pesquisarToolStripMenuItem.BackColor = SystemColors.Control;
@@ -103,6 +106,7 @@ namespace Biblioteca
             panel1.Visible = false;
         }
 
+        // Função do botão (Pesquisar) para mudar para o panel da pesquisa
         private void pesquisarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cadastrarToolStripMenuItem.BackColor = SystemColors.Control;
@@ -114,6 +118,7 @@ namespace Biblioteca
             ExibirLivroAtual();
         }
 
+        // Função para receber os dados do livro atual do banco de dados
         private void ExibirLivroAtual()
         {
             if (livrosTable == null || livrosTable.Count == 0)
@@ -160,6 +165,7 @@ namespace Biblioteca
                 pictureBoxDisponibilidade.Image = null;
         }
 
+        // Função do botão "próximo" na aba de pesquisa, seleciona o próximo livro na livrosTable
         private void buttonProx_Click(object sender, EventArgs e)
         {
             if (livrosTable == null || livrosTable.Count == 0) return;
@@ -167,6 +173,7 @@ namespace Biblioteca
             ExibirLivroAtual();
         }
 
+        // Função do botão "anterior" na aba de pesquisa, seleciona o livro anterior na livrosTable
         private void buttonAnt_Click(object sender, EventArgs e)
         {
             if (livrosTable == null || livrosTable.Count == 0) return;
@@ -174,6 +181,7 @@ namespace Biblioteca
             ExibirLivroAtual();
         }
 
+        // Função de alterar as disponibilidade do livro no banco
         private void buttonAlterarDisponibilidade_Click(object sender, EventArgs e)
         {
             if (livrosTable == null || livrosTable.Count == 0) return;
